@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Apache License 2.0
+# Gradle wrapper script for POSIX systems
+
+# Araçlar için temel yönlendirmeler
+exec java -jar "$(dirname "$0")/gradle/wrapper/gradle-wrapper.jar" "$@"
