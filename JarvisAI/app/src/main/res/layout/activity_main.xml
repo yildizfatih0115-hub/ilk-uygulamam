@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Arka plan gradient -->
+    <View
+        android:id="@+id/bgGradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_hud"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- RADAR - Ortada dönen halka -->
+    <ImageView
+        android:id="@+id/radarView"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:src="@drawable/ic_radar"
+        android:alpha="0.25"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Dış halka -->
+    <ImageView
+        android:id="@+id/hudRingOuter"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:src="@drawable/ic_ring_outer"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- İç halka -->
+    <ImageView
+        android:id="@+id/hudRingInner"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_ring_inner"
+        android:alpha="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Puls efekti -->
+    <View
+        android:id="@+id/hudPulse"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_pulse"
+        android:alpha="0.6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- ═══ ÜST BAR ═══ -->
+    <!-- JARVIS Logo/İsim -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="J.A.R.V.I.S"
+        android:textColor="#FF4444"
+        android:textSize="22sp"
+        android:letterSpacing="0.3"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADVANCED AI SYSTEM v2.0"
+        android:textColor="#88FF4444"
+        android:textSize="10sp"
+        android:letterSpacing="0.2"
+        android:fontFamily="monospace"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Saat -->
+    <TextView
+        android:id="@+id/tvClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="#CCFF4444"
+        android:textSize="32sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Tarih -->
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01.01.2026"
+        android:textColor="#88FF4444"
+        android:textSize="11sp"
+        android:fontFamily="monospace"
+        app:layout_constraintTop_toBottomOf="@id/tvClock"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- ═══ SOL Panel — Butonlar ═══ -->
+    <LinearLayout
+        android:id="@+id/leftPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:background="@drawable/btn_hud"
+            android:layout_margin="6dp"
+            android:contentDescription="Kamera"/>
+
+        <ImageButton
+            android:id="@+id/btnGibberlink"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_lock_lock"
+            android:background="@drawable/btn_hud_green"
+            android:layout_margin="6dp"
+            android:contentDescription="GibberLink"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GBL"
+            android:textColor="#44FF44"
+            android:textSize="8sp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- ═══ SAĞ Panel — Butonlar ═══ -->
+    <LinearLayout
+        android:id="@+id/rightPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:background="@drawable/btn_hud"
+            android:layout_margin="6dp"
+            android:contentDescription="Ayarlar"/>
+
+        <ImageButton
+            android:id="@+id/btnClear"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="@drawable/btn_hud"
+            android:layout_margin="6dp"
+            android:contentDescription="Temizle"/>
+
+    </LinearLayout>
+
+    <!-- ═══ DURUM kartı ═══ -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#CC0A0A0A"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toEndOf="@id/leftPanel"
+        app:layout_constraintEnd_toStartOf="@id/rightPanel">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistemler başlatılıyor..."
+            android:textColor="#CCFF4444"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Ripple / dinleme efekti -->
+    <View
+        android:id="@+id/rippleView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circle_ripple"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Mic wave indicator -->
+    <View
+        android:id="@+id/micWave"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle_mic"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- ═══ MİKROFON butonu — Merkez alt ═══ -->
+    <ImageButton
+        android:id="@+id/btnMic"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:background="@drawable/btn_mic_hud"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="Mikrofon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ═══ CHAT alanı — Alt ═══ -->
+    <ScrollView
+        android:id="@+id/scrollChat"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_margin="12dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#CCFF4444"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/bg_chat"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

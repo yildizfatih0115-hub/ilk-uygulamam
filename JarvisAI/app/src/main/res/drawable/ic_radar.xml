@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="280dp"
+    android:viewportWidth="280"
+    android:viewportHeight="280">
+    <!-- Dış çember -->
+    <path android:strokeColor="#FF4444" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M140,10 A130,130 0 1,1 139.9,10"/>
+    <!-- Orta çember -->
+    <path android:strokeColor="#882222" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M140,50 A90,90 0 1,1 139.9,50"/>
+    <!-- İç çember -->
+    <path android:strokeColor="#551111" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M140,90 A50,50 0 1,1 139.9,90"/>
+    <!-- Çapraz çizgiler -->
+    <path android:strokeColor="#331111" android:strokeWidth="0.8"
+        android:pathData="M10,140 L270,140"/>
+    <path android:strokeColor="#331111" android:strokeWidth="0.8"
+        android:pathData="M140,10 L140,270"/>
+    <path android:strokeColor="#221111" android:strokeWidth="0.5"
+        android:pathData="M47,47 L233,233"/>
+    <path android:strokeColor="#221111" android:strokeWidth="0.5"
+        android:pathData="M233,47 L47,233"/>
+    <!-- Radar tarama çizgisi -->
+    <path android:strokeColor="#FF2222" android:strokeWidth="2" android:fillColor="#22FF000000"
+        android:pathData="M140,140 L270,140 A130,130 0 0,0 233,47 Z"/>
+</vector>

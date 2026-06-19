@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.JarvisAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF1A1A</item>
+        <item name="colorPrimaryVariant">#CC0000</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#FF4444</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:colorBackground">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:textColor">#FFCCCC</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.JarvisAI.GibberLink" parent="Theme.JarvisAI">
+        <item name="colorPrimary">#44FF44</item>
+        <item name="colorSecondary">#00CC00</item>
+        <item name="android:statusBarColor">#001100</item>
+    </style>
+</resources>

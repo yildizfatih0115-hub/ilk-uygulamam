@@ -1,0 +1,3 @@
+-keep class com.jarvis.ai.** { *; }
+-keep class com.google.ai.client.** { *; }
+-dontwarn com.google.ai.client.**

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">J.A.R.V.I.S</string>
+    <string name="app_description">Just A Rather Very Intelligent System</string>
+    <string name="gibberlink_mode">GibberLink Modu</string>
+    <string name="settings">Ayarlar</string>
+    <string name="listening">Dinliyorum...</string>
+    <string name="ready">Hazır</string>
+</resources>
