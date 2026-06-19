@@ -1,26 +1,37 @@
-name: APK Uretici
+name: APK Uretici Guncel
 
 on:
   push:
     branches: [ "main", "master" ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
     steps:
     - uses: actions/checkout@v4
-    - name: Java Kurulumu
+
+    - name: Java 17 Kurulumu
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: '17'
-    - name: Calistirma Iznini Ver
-      run: chmod +x JarvisAI/gradlew
-    - name: APK Derle
-      run: ./gradlew assembleDebug
+
+    - name: Gradle Sistemini Sifirdan Kur
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gradle
+        gradle wrapper
       working-directory: JarvisAI
+
+    - name: Projeyi Temizle ve Derle
+      run: ./gradlew assembleDebug --stacktrace
+      working-directory: JarvisAI
+
     - name: APK Dosyasini Yukle
       uses: actions/upload-artifact@v4
       with:
-        name: app-debug
+        name: Hazir-Uygulamam
         path: JarvisAI/app/build/outputs/apk/debug/app-debug.apk
